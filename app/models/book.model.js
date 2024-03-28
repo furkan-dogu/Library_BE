@@ -1,8 +1,10 @@
 "use strict";
 
-const { Sequelize, DataTypes } = require('sequelize')
+const POSTGRESQL = process.env.POSTGRESQL;
 
-const sequelize = new Sequelize('sqlite:./db.sqlite3')
+const { Sequelize, DataTypes } = require('sequelize');
+
+const sequelize = new Sequelize(`postgres://${POSTGRESQL}`);
 
 const Book = sequelize.define("books", {
 
@@ -17,7 +19,7 @@ const Book = sequelize.define("books", {
     },
 
     ISBN: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING, // ISBN numarası dize olarak saklanacak
         allowNull: false
     },
 
@@ -36,12 +38,13 @@ const Book = sequelize.define("books", {
         allowNull: false
     },
 
-})
+});
 
 // sequelize.sync()
+// sequelize.sync({ force: true })
 
 sequelize.authenticate()
     .then(() => console.log("Database connected"))
-    .catch(() => console.log("Database not connected"))
+    .catch(() => console.log("Database not connected"));
 
-module.exports = Book
+module.exports = Book;
