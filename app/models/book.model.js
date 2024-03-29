@@ -19,7 +19,7 @@ const Book = sequelize.define("books", {
     },
 
     ISBN: {
-        type: DataTypes.STRING, // ISBN numarası dize olarak saklanacak
+        type: DataTypes.STRING, 
         allowNull: false
     },
 
@@ -42,6 +42,7 @@ const Book = sequelize.define("books", {
 
 // sequelize.sync()
 // sequelize.sync({ force: true })
+// sequelize.sync({ after: true })
 
 sequelize.authenticate()
     .then(() => console.log("Database connected"))
