@@ -1,10 +1,8 @@
 "use strict";
 
-const POSTGRESQL = process.env.POSTGRESQL;
-
 const { Sequelize, DataTypes } = require('sequelize');
 
-const sequelize = new Sequelize(`postgres://${POSTGRESQL}`);
+const sequelize = new Sequelize("sqlite:./db.sqlite3")
 
 const Book = sequelize.define("books", {
 
