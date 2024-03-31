@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8000
 app.use(express.json())
 
 app.use(cors({
-    origin: "http://localhost:3000"
+    origin: "https://library-fe-two.vercel.app/"
 }))
 
 require("express-async-errors")
