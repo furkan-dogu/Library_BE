@@ -27,7 +27,7 @@ module.exports = {
 
     read: async (req, res) => {
 
-        const data = await Book.findByPk(req.params.id)
+        const data = await Book.findOne({_id: req.params.id})
 
         res.status(200).send({
             error: false,
@@ -38,28 +38,23 @@ module.exports = {
 
     update: async (req, res) => {
 
-        const data = await Book.update(req.body, {where: {id: req.params.id}})
+        const data = await Book.updateOne({_id: req.params.id}, req.body)
+        const newData = await Book.find({_id: req.params.id})
 
         res.status(202).send({
             error: false,
             message: "Updated",
             result: data,
-            new: await Book.findByPk(req.params.id)
+            newData
         })
 
     },
 
     delete: async (req, res) => {
 
-        const data = await Book.destroy({where: {id: req.params.id}})
+        const data = await Book.deleteOne({_id: req.params.id})
 
-        if(data > 0) {
-            res.sendStatus(204)
-        } else {
-            res.errorStatusCode = 404
-            throw new Error("Not Found")
-        }
-
+        res.sendStatus((data.deletedCount >= 1) ? 204 : 404)
     }
 
 }
