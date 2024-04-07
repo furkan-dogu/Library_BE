@@ -1,12 +1,12 @@
 "use strict";
 
-const Book = require("../models/book.model")
+const { Book } = require("../models/book.model")
 
 module.exports = {
 
     list: async (req, res) => {
 
-        const data = await Book.findAndCountAll()
+        const data = await Book.find()
     
         res.status(200).send({
             error: false,
@@ -20,7 +20,7 @@ module.exports = {
     
         res.status(201).send({
             error: false,
-            result: data.dataValues
+            result: data
         })
     
     },

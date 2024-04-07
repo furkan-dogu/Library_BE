@@ -1,27 +1,58 @@
 # Book Management System
 
-This project constitutes the backend part of a book management system. It provides RESTful APIs using Express.js and performs basic operations on books over an SQLite database.
+This project constitutes the backend part of a book management system. It provides RESTful APIs using Express.js and performs basic operations on books over an MongoDB database.
 
-## Demo
+### ERD
 
-[Live Link](https://library-hqep.onrender.com/)
+![ERD](./erd.png)
+
+## Table of Contents
+
+- [Technologies Used](#technologies-used)
+- [Usage](#usage)
+- [Project Skeleton](#project-skeleton)
+
+## Live Demo
+
+[Library API](https://library-hqep.onrender.com/)
 
 ## Technologies Used
 
-- [Express.js](https://expressjs.com/): A minimalist web framework for Node.js used for building the RESTful API endpoints.
-- [SQLite](https://www.sqlite.org/): A lightweight, serverless, self-contained SQL database engine used for storing book data.
-- [cors](https://www.npmjs.com/package/cors): A middleware for Express.js used for enabling Cross-Origin Resource Sharing (CORS).
-- [dotenv](https://www.npmjs.com/package/dotenv): A module used for loading environment variables from a `.env` file into `process.env`.
-- [express-async-errors](https://www.npmjs.com/package/express-async-errors): A module used for handling asynchronous errors in Express.js middleware and route handlers.
-- [pg](https://www.npmjs.com/package/pg) and [pg-hstore](https://www.npmjs.com/package/pg-hstore): PostgreSQL client for Node.js and a module used for serializing and deserializing JSON data into hstore format.
-- [Sequelize](https://sequelize.org/): A promise-based Node.js ORM (Object-Relational Mapping) used for interacting with the SQLite database and performing database operations.
+- **Express.js**: A minimalist web framework for Node.js used for building the RESTful API endpoints.
+- **dotenv**: A module used for loading environment variables from a `.env` file into `process.env`.
+- **express-async-errors**: A module used for handling asynchronous errors in Express.js middleware and route handlers.
+- **MongoDB**: A NoSQL database program, using JSON-like documents with optional schema.
+- **Mongoose**: A MongoDB object modeling tool designed to work in an asynchronous environment. It provides a straight-forward, schema-based solution to model your application data.
 
 ## Usage
 
 You can perform basic operations on books such as listing, adding new books, updating, and deleting using this API. Operations can be performed as follows:
 
-- **Listing**: List all books using the `GET /books` endpoint.
-- **Creating**: Add a new book using the `POST /books` endpoint.
-- **Reading**: View a specific book using the GET `/books/:id` endpoint.
-- **Updating**: Update a book using either the `PUT /books/:id` or `PATCH /books/:id` endpoints.
-- **Deleting**: Delete a book using the `DELETE /books/:id` endpoint. 
+- **Listing**: List all books using the `GET /` endpoint.
+- **Creating**: Add a new book using the `POST /` endpoint.
+- **Reading**: View a specific book using the GET `/:id` endpoint.
+- **Updating**: Update a book using either the `PUT /:id` or `PATCH /:id` endpoints.
+- **Deleting**: Delete a book using the `DELETE /:id` endpoint. 
+
+## Project Skeleton
+
+```
+Book Management System API (folder) 
+│
+├── src
+│    ├── configs
+│    │     └── dbConnection.js
+│    ├── controllers                
+│    │     └── book.controller.js 
+│    ├── middlewares   
+│    │     └── errorHandler.js 
+│    ├── models                
+│    │     └── book.model.js
+│    └── routes                
+│          └── book.router.js
+├── .env
+├── .gitignore
+├── index.js
+├── package.json
+└── README.md
+```
