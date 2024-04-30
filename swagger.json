@@ -1,0 +1,250 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": "",
+    "termsOfService": "https://furkandogu.vercel.app",
+    "contact": {
+      "name": "",
+      "email": "furkandogu2018@gmail.com"
+    },
+    "license": {
+      "name": "ISC"
+    }
+  },
+  "host": "library-be-tw3h.onrender.com/",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "summary": "List Books",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Books"
+        ],
+        "summary": "Create Book",
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "_id": {
+                  "type": "string",
+                  "example": "661aee14a06755ee921e79f4"
+                },
+                "title": {
+                  "type": "string",
+                  "example": "title"
+                },
+                "author": {
+                  "type": "string",
+                  "example": "author"
+                },
+                "ISBN": {
+                  "type": "string",
+                  "example": "123456789"
+                },
+                "genre": {
+                  "type": "string",
+                  "example": "genre"
+                },
+                "publicationYear": {
+                  "type": "number",
+                  "example": 2010
+                },
+                "image": {
+                  "type": "string",
+                  "example": "https://www.iskultur.com.tr/webp/2010/02/Nutuk.png"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/{id}": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "summary": "Get Single Book",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Books"
+        ],
+        "summary": "Update Book",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "_id": {
+                  "type": "string",
+                  "example": "661aee14a06755ee921e79f4"
+                },
+                "title": {
+                  "type": "string",
+                  "example": "title"
+                },
+                "author": {
+                  "type": "string",
+                  "example": "author"
+                },
+                "ISBN": {
+                  "type": "string",
+                  "example": "123456789"
+                },
+                "genre": {
+                  "type": "string",
+                  "example": "genre"
+                },
+                "publicationYear": {
+                  "type": "number",
+                  "example": 2010
+                },
+                "image": {
+                  "type": "string",
+                  "example": "https://www.iskultur.com.tr/webp/2010/02/Nutuk.png"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Books"
+        ],
+        "summary": "Delete Book",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Books"
+        ],
+        "summary": "Update Book",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "_id": {
+                  "type": "string",
+                  "example": "661aee14a06755ee921e79f4"
+                },
+                "title": {
+                  "type": "string",
+                  "example": "title"
+                },
+                "author": {
+                  "type": "string",
+                  "example": "author"
+                },
+                "ISBN": {
+                  "type": "string",
+                  "example": "123456789"
+                },
+                "genre": {
+                  "type": "string",
+                  "example": "genre"
+                },
+                "publicationYear": {
+                  "type": "number",
+                  "example": 2010
+                },
+                "image": {
+                  "type": "string",
+                  "example": "https://www.iskultur.com.tr/webp/2010/02/Nutuk.png"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          }
+        }
+      }
+    }
+  }
+}
