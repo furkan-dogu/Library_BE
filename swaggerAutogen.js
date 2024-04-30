@@ -1,7 +1,7 @@
 "use strict"
 
 require("dotenv").config()
-const HOST = process.env?.HOST || "library-be-tw3h.onrender.com/"
+const HOST = process.env?.HOST || "library-be-tw3h.onrender.com"
 
 const swaggerAutogen = require('swagger-autogen')()
 const packageJson = require('./package.json')

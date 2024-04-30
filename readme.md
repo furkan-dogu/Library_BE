@@ -9,6 +9,7 @@ This project constitutes the backend part of a book management system. It provid
 ## Table of Contents
 
 - [Technologies Used](#technologies-used)
+- [Documentation](#documentation)
 - [Usage](#usage)
 - [Project Skeleton](#project-skeleton)
 
@@ -23,6 +24,12 @@ This project constitutes the backend part of a book management system. It provid
 - **express-async-errors**: A module used for handling asynchronous errors in Express.js middleware and route handlers.
 - **MongoDB**: A NoSQL database program, using JSON-like documents with optional schema.
 - **Mongoose**: A MongoDB object modeling tool designed to work in an asynchronous environment. It provides a straight-forward, schema-based solution to model your application data.
+
+### Documentation
+
+- Swagger UI: [https://library-be-tw3h.onrender.com/documents/swagger](https://library-be-tw3h.onrender.com/documents/swagger)
+- Redoc: [https://library-be-tw3h.onrender.com/documents/redoc](https://library-be-tw3h.onrender.com/documents/redoc)
+- JSON Documentation: [https://library-be-tw3h.onrender.com/documents/json](https://library-be-tw3h.onrender.com/documents/json)
 
 ## Usage
 

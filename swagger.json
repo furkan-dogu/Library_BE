@@ -13,7 +13,7 @@
       "name": "ISC"
     }
   },
-  "host": "library-be-tw3h.onrender.com/",
+  "host": "library-be-tw3h.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
