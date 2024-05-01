@@ -33,7 +33,25 @@ require("./app/configs/dbConnection")
 
 require("express-async-errors")
 
-app.use(require("./app/routes/book.router"))
+app.all("/", (req, res) => {
+    res.send({
+        error: false,
+        message: "WELCOME BLOG API PROJECT",
+        api: {
+            documents: {
+                swagger: 'https://library-be-two.vercel.app/documents/swagger',
+                redoc: 'https://library-be-two.vercel.app/documents/redoc',
+                json: 'https://library-be-two.vercel.app/documents/json',
+            },
+            endpoints: {
+                books: 'https://library-be-two.vercel.app/books'
+            },
+            contact: 'furkandogu2018@gmail.com'
+        },
+    })
+})
+
+app.use("/books", require("./app/routes/book.router"))
 
 app.use(require("./app/middlewares/errorHandler"))
 

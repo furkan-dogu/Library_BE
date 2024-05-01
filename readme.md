@@ -15,7 +15,7 @@ This project constitutes the backend part of a book management system. It provid
 
 ## Live Demo
 
-[Library API](https://library-be-tw3h.onrender.com/)
+[Library API](https://library-be-two.vercel.app/)
 
 ## Technologies Used
 
@@ -27,9 +27,9 @@ This project constitutes the backend part of a book management system. It provid
 
 ### Documentation
 
-- Swagger UI: [https://library-be-tw3h.onrender.com/documents/swagger](https://library-be-tw3h.onrender.com/documents/swagger)
-- Redoc: [https://library-be-tw3h.onrender.com/documents/redoc](https://library-be-tw3h.onrender.com/documents/redoc)
-- JSON Documentation: [https://library-be-tw3h.onrender.com/documents/json](https://library-be-tw3h.onrender.com/documents/json)
+- Swagger UI: [https://library-be-two.vercel.app/documents/swagger](https://library-be-two.vercel.app/documents/swagger)
+- Redoc: [https://library-be-two.vercel.app/documents/redoc](https://library-be-two.vercel.app/documents/redoc)
+- JSON Documentation: [https://library-be-two.vercel.app/documents/json](https://library-be-two.vercel.app/documents/json)
 
 ## Usage
 
