@@ -36,7 +36,7 @@ require("express-async-errors")
 app.all("/", (req, res) => {
     res.send({
         error: false,
-        message: "WELCOME BLOG API PROJECT",
+        message: "WELCOME LIBRARY PROJECT",
         api: {
             documents: {
                 swagger: 'https://library-be-two.vercel.app/documents/swagger',
